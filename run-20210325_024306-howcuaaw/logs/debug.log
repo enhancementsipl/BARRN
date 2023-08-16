@@ -1,0 +1,121 @@
+2021-03-25 02:43:06,681 INFO    MainThread:15175 [wandb_setup.py:_flush():70] setting env: {}
+2021-03-25 02:43:06,681 INFO    MainThread:15175 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2021-03-25 02:43:06,681 INFO    MainThread:15175 [wandb_setup.py:_flush():70] setting login settings: {}
+2021-03-25 02:43:06,681 INFO    MainThread:15175 [wandb_init.py:_log_setup():318] Logging user logs to /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_024306-howcuaaw/logs/debug.log
+2021-03-25 02:43:06,681 INFO    MainThread:15175 [wandb_init.py:_log_setup():319] Logging internal logs to /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_024306-howcuaaw/logs/debug-internal.log
+2021-03-25 02:43:35,388 ERROR   Thread-1  :15175 [retry.py:__call__():111] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 170, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 177, in _new_conn
+    % (self.host, self.timeout),
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x7ffa634afc90>, 'Connection to api.wandb.ai timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/urllib3/util/retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7ffa634afc90>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/wandb/old/retry.py", line 96, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 131, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/requests/api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/gyq/software/Anaconda/envs/py37/lib/python3.7/site-packages/requests/adapters.py", line 504, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7ffa634afc90>, 'Connection to api.wandb.ai timed out. (connect timeout=10)'))
+2021-03-25 02:43:37,051 INFO    MainThread:15175 [wandb_run.py:_console_start():1396] atexit reg
+2021-03-25 02:43:37,051 INFO    MainThread:15175 [wandb_run.py:_redirect():1259] redirect: SettingsConsole.REDIRECT
+2021-03-25 02:43:37,052 INFO    MainThread:15175 [wandb_run.py:_redirect():1264] Redirecting console.
+2021-03-25 02:43:37,052 INFO    MainThread:15175 [redirect.py:install():213] install start
+2021-03-25 02:43:37,052 INFO    MainThread:15175 [redirect.py:install():228] install stop
+2021-03-25 02:43:37,052 INFO    MainThread:15175 [redirect.py:install():213] install start
+2021-03-25 02:43:37,052 INFO    MainThread:15175 [redirect.py:install():228] install stop
+2021-03-25 02:43:37,053 INFO    MainThread:15175 [wandb_run.py:_redirect():1310] Redirects installed.
+2021-03-25 02:43:50,108 INFO    MainThread:15175 [wandb_watch.py:watch():39] Watching
+2021-03-25 02:44:42,049 INFO    MainThread:15175 [wandb_run.py:_atexit_cleanup():1366] got exitcode: 1
+2021-03-25 02:44:42,049 INFO    MainThread:15175 [wandb_run.py:_restore():1338] restore
+2021-03-25 02:44:42,049 INFO    MainThread:15175 [redirect.py:uninstall():232] uninstall start
+2021-03-25 02:44:42,049 INFO    MainThread:15175 [redirect.py:_stop():287] _stop: stdout
+2021-03-25 02:44:42,050 INFO    stdout    :15175 [redirect.py:_pipe_relay():129] relay done saw last write: stdout
+2021-03-25 02:44:42,050 INFO    MainThread:15175 [redirect.py:_stop():293] _stop closed: stdout
+2021-03-25 02:44:42,050 INFO    stdout    :15175 [redirect.py:_pipe_relay():145] relay done done: stdout
+2021-03-25 02:44:42,051 INFO    MainThread:15175 [redirect.py:_stop():299] _stop joined: stdout
+2021-03-25 02:44:42,051 INFO    MainThread:15175 [redirect.py:_stop():301] _stop rd closed: stdout
+2021-03-25 02:44:42,051 INFO    MainThread:15175 [redirect.py:uninstall():236] uninstall done
+2021-03-25 02:44:42,051 INFO    MainThread:15175 [redirect.py:uninstall():232] uninstall start
+2021-03-25 02:44:42,051 INFO    MainThread:15175 [redirect.py:_stop():287] _stop: stderr
+2021-03-25 02:44:42,051 INFO    MainThread:15175 [redirect.py:_stop():293] _stop closed: stderr
+2021-03-25 02:44:42,051 INFO    stderr    :15175 [redirect.py:_pipe_relay():129] relay done saw last write: stderr
+2021-03-25 02:44:42,052 INFO    stderr    :15175 [redirect.py:_pipe_relay():145] relay done done: stderr
+2021-03-25 02:44:42,052 INFO    MainThread:15175 [redirect.py:_stop():299] _stop joined: stderr
+2021-03-25 02:44:42,052 INFO    MainThread:15175 [redirect.py:_stop():301] _stop rd closed: stderr
+2021-03-25 02:44:42,052 INFO    MainThread:15175 [redirect.py:uninstall():236] uninstall done
+2021-03-25 02:44:42,666 INFO    MainThread:15175 [wandb_run.py:_wait_for_finish():1489] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 566
+  total_bytes: 566
+}
+
+2021-03-25 02:44:44,670 INFO    MainThread:15175 [wandb_run.py:_wait_for_finish():1489] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 15535
+  total_bytes: 15535
+}
+
+2021-03-25 02:44:46,675 INFO    MainThread:15175 [wandb_run.py:_wait_for_finish():1489] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 15535
+  total_bytes: 15535
+}
+
+2021-03-25 02:44:47,792 INFO    MainThread:15175 [wandb_run.py:_show_files():1711] logging synced files
+2021-03-25 02:44:47,796 INFO    MainThread:15175 [internal.py:handle_exit():139] Internal process exited

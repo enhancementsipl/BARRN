@@ -1,0 +1,61 @@
+{
+    "mode": "ar",
+    "use_cl": true,
+    "gpu_ids": [0],
+
+    "quality": 10,
+    "is_train": true,
+    "use_chop": false,
+    "rgb_range": 255,
+    "self_ensemble": false,
+    "save_image": false,
+
+    "datasets": {
+        "train": {
+            "mode": "LRHR",
+            "dataroot_HR": "/home/gyq/data_set/DIV2K/DIV2K_train_HR",
+            "dataroot_LR": "/home/gyq/data_set/DIV2K/AR/DIV2K_JPEG _compress/train/x10",
+            "data_type": "img",
+            "n_workers": 16,
+            "batch_size": 16,
+            "LR_size": 128,
+            "use_flip": true,
+            "use_rot": true,
+            "noise": "."
+        },
+        "val": {
+            "mode": "LRHR",
+            "dataroot_HR": "/home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/results/AR/Set5/HQ",
+            "dataroot_LR": "/home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/results/AR/Set5/LQ/x10",
+            "data_type": "img"
+        }
+    },
+
+    "networks": {
+        "which_model": "SRFBN",
+        "num_features": 64,
+        "in_channels": 3,
+        "out_channels": 3,
+        "num_steps": 4,
+        "num_groups": 6
+    },
+
+    "solver": {
+        "type": "ADAM",
+        "learning_rate": 0.0001,
+        "weight_decay": 0,
+        "lr_scheme": "MultiStepLR",
+        "lr_steps": [200, 400, 600, 800],
+        "lr_gamma": 0.5,
+        "loss_type": "l2",
+        "manual_seed": 0,
+        "num_epochs": 1000,
+        "skip_threshold": 3,
+        "split_batch": 2,
+        "save_ckp_step": 50,
+        "save_vis_step": 1,
+        "pretrain":  "resume",
+        "pretrained_path": "/home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/experiments/SRFBN_AR_in3f64_x10/epochs/last_ckp.pth",
+        "cl_weights": [0.1, 0.1, 0.1, 0.1]
+    }
+}

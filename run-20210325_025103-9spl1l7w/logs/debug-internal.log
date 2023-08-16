@@ -1,0 +1,74 @@
+2021-03-25 02:51:05,448 INFO    MainThread:27586 [internal.py:wandb_internal():64] W&B internal server running at pid: 27586
+2021-03-25 02:51:05,452 DEBUG   HandlerThread:27586 [handler.py:handle_request():55] handle_request: check_version
+2021-03-25 02:51:05,453 INFO    WriterThread:27586 [datastore.py:open_for_write():77] open: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/run-9spl1l7w.wandb
+2021-03-25 02:51:05,458 DEBUG   SenderThread:27586 [sender.py:send():117] send: header
+2021-03-25 02:51:05,458 DEBUG   SenderThread:27586 [sender.py:send():117] send: request
+2021-03-25 02:51:05,459 DEBUG   SenderThread:27586 [sender.py:send_request():126] send_request: check_version
+2021-03-25 02:51:05,464 DEBUG   Thread-9  :27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): pypi.org:443
+2021-03-25 02:51:10,461 DEBUG   SenderThread:27586 [sender.py:send():117] send: run
+2021-03-25 02:51:10,472 DEBUG   SenderThread:27586 [git.py:repo():33] git repository is invalid
+2021-03-25 02:51:10,489 DEBUG   SenderThread:27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:11,139 DEBUG   SenderThread:27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-03-25 02:51:11,156 INFO    SenderThread:27586 [dir_watcher.py:__init__():165] watching files in: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files
+2021-03-25 02:51:11,156 INFO    SenderThread:27586 [sender.py:_start_run_threads():596] run started: 9spl1l7w with start time 1616640664
+2021-03-25 02:51:11,157 DEBUG   SenderThread:27586 [sender.py:send():117] send: summary
+2021-03-25 02:51:11,158 INFO    SenderThread:27586 [sender.py:_save_file():682] saving file wandb-summary.json with policy end
+2021-03-25 02:51:11,160 DEBUG   HandlerThread:27586 [handler.py:handle_request():55] handle_request: run_start
+2021-03-25 02:51:11,165 DEBUG   HandlerThread:27586 [meta.py:__init__():34] meta init
+2021-03-25 02:51:11,166 DEBUG   HandlerThread:27586 [meta.py:__init__():48] meta init done
+2021-03-25 02:51:11,166 DEBUG   HandlerThread:27586 [meta.py:probe():190] probe
+2021-03-25 02:51:11,173 DEBUG   HandlerThread:27586 [git.py:repo():33] git repository is invalid
+2021-03-25 02:51:11,174 DEBUG   HandlerThread:27586 [meta.py:_save_pip():52] save pip
+2021-03-25 02:51:11,176 DEBUG   HandlerThread:27586 [meta.py:_save_pip():66] save pip done
+2021-03-25 02:51:11,176 DEBUG   HandlerThread:27586 [meta.py:probe():231] probe done
+2021-03-25 02:51:11,346 DEBUG   SenderThread:27586 [sender.py:send():117] send: files
+2021-03-25 02:51:11,347 INFO    SenderThread:27586 [sender.py:_save_file():682] saving file wandb-metadata.json with policy now
+2021-03-25 02:51:11,367 DEBUG   Thread-16 :27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:11,367 DEBUG   HandlerThread:27586 [handler.py:handle_request():55] handle_request: status
+2021-03-25 02:51:11,368 DEBUG   SenderThread:27586 [sender.py:send():117] send: request
+2021-03-25 02:51:11,368 DEBUG   SenderThread:27586 [sender.py:send_request():126] send_request: status
+2021-03-25 02:51:11,381 DEBUG   SenderThread:27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:11,971 DEBUG   SenderThread:27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-03-25 02:51:12,165 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_created():213] file/dir created: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/output.log
+2021-03-25 02:51:12,166 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_created():213] file/dir created: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/requirements.txt
+2021-03-25 02:51:12,167 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_created():213] file/dir created: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/wandb-summary.json
+2021-03-25 02:51:12,167 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_created():213] file/dir created: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/wandb-metadata.json
+2021-03-25 02:51:13,705 DEBUG   Thread-10 :27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:14,159 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/output.log
+2021-03-25 02:51:14,347 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:14,721 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:16,973 DEBUG   Thread-16 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-03-25 02:51:17,017 DEBUG   Thread-16 :27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): storage.googleapis.com:443
+2021-03-25 02:51:17,168 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:17,550 DEBUG   Thread-16 :27586 [connectionpool.py:_make_request():461] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/gaoyuqi/SRFBN/9spl1l7w/wandb-metadata.json?Expires=1616727117&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=iRyItD3hoR4GP%2BZ4BqejEU0yTarhGteCMpVB0TI%2BIIUaYhsEHSRYkiDAO%2FaUiumLN68PFb%2F2d9VzbqUc3itiB%2Bxtz6pZYsuyaABzqlX9GNP99iL16a94qDeThA3Ljg5IIBepkomPCkBVOoaftqSARXaDQq7YYNtEEbRd3et%2FBZR3jZWjbwDFC5%2FrUhz2p0Hhe2aXQ8Z0vGEp%2FhSl9qb6lHpvGdrgpdfdbcCu2NRSvTIRKlBd4sZpCgkup6YrPljVzNImkAjDvr3inNHEVQSzZvnPwMiwKrS5dYHw%2BzfAeO%2Fg4iD5JV0nOVg3uFHdQYxGtZOmSPRkJpjQJxNBZdRFzw%3D%3D HTTP/1.1" 200 0
+2021-03-25 02:51:17,553 INFO    Thread-16 :27586 [upload_job.py:push():133] Uploaded file /tmp/tmp6mmzz_phwandb/1couxls7-wandb-metadata.json
+2021-03-25 02:51:17,742 DEBUG   Thread-9  :27586 [connectionpool.py:_make_request():461] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 55358
+2021-03-25 02:51:19,418 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:19,701 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:24,000 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:24,277 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:26,979 DEBUG   HandlerThread:27586 [handler.py:handle_request():55] handle_request: status
+2021-03-25 02:51:26,979 DEBUG   SenderThread:27586 [sender.py:send():117] send: request
+2021-03-25 02:51:26,980 DEBUG   SenderThread:27586 [sender.py:send_request():126] send_request: status
+2021-03-25 02:51:26,987 DEBUG   SenderThread:27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:27,576 DEBUG   SenderThread:27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-03-25 02:51:28,539 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:28,825 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:33,080 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:33,351 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:37,622 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:37,895 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:39,183 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/output.log
+2021-03-25 02:51:40,928 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None
+2021-03-25 02:51:42,173 DEBUG   SenderThread:27586 [sender.py:send():117] send: stats
+2021-03-25 02:51:42,585 DEBUG   HandlerThread:27586 [handler.py:handle_request():55] handle_request: status
+2021-03-25 02:51:42,586 DEBUG   SenderThread:27586 [sender.py:send():117] send: request
+2021-03-25 02:51:42,586 DEBUG   SenderThread:27586 [sender.py:send_request():126] send_request: status
+2021-03-25 02:51:42,599 DEBUG   SenderThread:27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:43,188 DEBUG   SenderThread:27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2021-03-25 02:51:43,869 WARNING MainThread:27586 [internal.py:wandb_internal():118] Internal process interrupt: 1
+2021-03-25 02:51:44,190 INFO    Thread-13 :27586 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/wandb/run-20210325_025103-9spl1l7w/files/output.log
+2021-03-25 02:51:44,191 DEBUG   SenderThread:27586 [sender.py:send():117] send: telemetry
+2021-03-25 02:51:44,209 DEBUG   HandlerThread:27586 [handler.py:handle_request():55] handle_request: poll_exit
+2021-03-25 02:51:44,217 DEBUG   SenderThread:27586 [connectionpool.py:_new_conn():975] Starting new HTTPS connection (1): api.wandb.ai:443
+2021-03-25 02:51:44,450 DEBUG   Thread-10 :27586 [connectionpool.py:_make_request():461] https://api.wandb.ai:443 "POST /files/gaoyuqi/SRFBN/9spl1l7w/file_stream HTTP/1.1" 200 None

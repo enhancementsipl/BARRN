@@ -1,0 +1,33 @@
+{
+    "mode": "ar",
+    "use_cl": true,
+    "gpu_ids": [0],
+
+    "quality": 10,
+    "is_train": false,
+    "use_chop": false,
+    "rgb_range": 255,
+    "self_ensemble": false,
+
+    "datasets": {
+        "test_set1": {
+            "mode": "LR",
+            "dataroot_LR": "/home/gyq/data_set/LIVE1/LQ/x10/",
+            "dataroot_HR": "/home/gyq/data_set/LIVE1/HQ/",
+            "data_type": "img"
+        }
+    },
+
+    "networks": {
+        "which_model": "SRFBN",
+        "num_features": 64,
+        "in_channels": 3,
+        "out_channels": 3,
+        "num_steps": 4,
+        "num_groups": 4
+    },
+
+    "solver": {
+        "pretrained_path": "./models/best_ckp_mix_l.pth"
+    }
+}

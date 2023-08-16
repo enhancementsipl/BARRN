@@ -1,0 +1,18 @@
+{
+    "os": "Linux-4.13.0-36-generic-x86_64-with-debian-stretch-sid",
+    "python": "3.7.5",
+    "heartbeatAt": "2021-03-25T02:46:18.763076",
+    "startedAt": "2021-03-25T02:46:12.585341",
+    "docker": null,
+    "gpu": "GeForce GTX 1080 Ti",
+    "gpu_count": 2,
+    "cpu_count": 12,
+    "cuda": "10.0.130",
+    "args": [],
+    "state": "running",
+    "codePath": "train.py",
+    "program": "/home/gyq/share/gyq/program/SRFBN_CVPR19_fix_2/train.py",
+    "host": "Gyq",
+    "username": "gyq",
+    "executable": "/home/gyq/software/Anaconda/envs/py37/bin/python3.7"
+}
